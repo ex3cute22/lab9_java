@@ -106,15 +106,15 @@ public class Main{
             Car[][] array2 = new Car[2][];
            
             for (int i = 0; i < 2; i++){
-                array2[i] = new Car();
+                array2[i] = new Car[2];
             }
             
             for (int j = 0; j < 2; j++){
-                array2[0][j] = new Car("Toyota[0][" + i + "]", 1998 + i*2, 150000 + i*30000);
+                array2[0][j] = new Car("Toyota[0][" + j + "]", 1998 + j*2, 150000 + j*30000);
             }
 
             for (int j = 0; j < 2; j++){
-                array2[1][j] = new Car("Bmw[1][" + i + "]", 2000 + i*2, 300000 + i*30000);
+                array2[1][j] = new Car("Bmw[1][" + j + "]", 2000 + j*2, 300000 + j*30000);
             }
 
             for (int i = 0; i < 2; i++){
