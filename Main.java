@@ -32,6 +32,8 @@ class Car{
 
     public void read() {
         //Защищенный блок
+        boolean validInput = false;
+        while(!validInput){
         try {
 			Scanner scan = new Scanner(System.in);
 			System.out.println("Input name: ");
@@ -39,12 +41,14 @@ class Car{
 			System.out.println("Input year: ");
 			year = scan.nextInt();
 			System.out.println("Input price: ");
-			price = scan.nextInt();
+            price = scan.nextInt();
+            validInput = true;
         } 
         //Перехват исключений
         catch (Exception error) {
 			error.printStackTrace();
-		}
+        }
+    }
     }
 
     public void addTag(){
