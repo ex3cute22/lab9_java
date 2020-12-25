@@ -31,6 +31,7 @@ class Car{
     }
 
     public void read() {
+        //Защищенный блок
         try {
 			Scanner scan = new Scanner(System.in);
 			System.out.println("Input name: ");
@@ -39,7 +40,9 @@ class Car{
 			year = scan.nextInt();
 			System.out.println("Input price: ");
 			price = scan.nextInt();
-		} catch (Exception error) {
+        } 
+        //Перехват исключений
+        catch (Exception error) {
 			error.printStackTrace();
 		}
     }
@@ -90,7 +93,7 @@ public class Main{
             Car bmw = new Car("bmw");
             bmw.display();
             Car nissan = new Car();
+            nissan.read();
             nissan.display();
-
 }
 }
