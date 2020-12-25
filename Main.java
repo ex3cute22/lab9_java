@@ -92,12 +92,42 @@ class Support{
 
 public class Main{
     public static void main(String[] args) {
-        Car toyota = new Car("toyota", 1998, 100000);
-            toyota.display();
-            Car bmw = new Car("bmw");
-            bmw.display();
-            Car nissan = new Car();
-            nissan.read();
-            nissan.display();
+            
+        //Одномерный массив обьектов
+            Car[] array = new Car[] {
+                new Car("Toyota", 1998, 150000),
+                new Car("Bmw", 2010, 300000)
+            };
+
+            for (int i = 0; i < array.length; i++){
+                array[i].display();
+            }
+        //Двумерный массив обьектов
+            Car[][] array2 = new Car[2][];
+           
+            for (int i = 0; i < 2; i++){
+                array2[i] = new Car();
+            }
+            
+            for (int j = 0; j < 2; j++){
+                array2[0][j] = new Car("Toyota[0][" + i + "]", 1998 + i*2, 150000 + i*30000);
+            }
+
+            for (int j = 0; j < 2; j++){
+                array2[1][j] = new Car("Bmw[1][" + i + "]", 2000 + i*2, 300000 + i*30000);
+            }
+
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 2; j++){
+                    array2[i][j].display();
+                }
+            }
+            // Car toyota = new Car("toyota", 1998, 100000);
+            // toyota.display();
+            // Car bmw = new Car("bmw");
+            // bmw.display();
+            // Car nissan = new Car();
+            // nissan.read();
+            // nissan.display();
 }
 }
